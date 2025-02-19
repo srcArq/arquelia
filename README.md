@@ -90,7 +90,7 @@ Inside **AstroWind** template, you'll see the following folders and files:
 │   │   ├── blog/
 │   │   ├── common/
 │   │   ├── ui/
-│   │   ├── Widgets/
+│   │   ├── widgets/
 │   │   │   ├── Header.astro
 │   │   │   └── ...
 │   │   ├── CustomStyles.astro
