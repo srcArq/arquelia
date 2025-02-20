@@ -241,7 +241,7 @@ export interface Brands extends Omit<Headline, 'classes'>, Widget {
   images?: Array<Image>;
 }
 
-export interface Features extends Omit<Headline, 'classes'>, Widget {
+export interface AboutMe extends Omit<Headline, 'classes'>, Widget {
   image?: string | unknown;
   video?: Video;
   items?: Array<Item>;
