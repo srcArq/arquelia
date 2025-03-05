@@ -10,6 +10,7 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
+import photoProfile from '../assets/images/photoProfile.jpg';
 
 const metadata = {
   title: 'Personal Homepage Demo',
@@ -43,8 +44,8 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
+    title="Arquelia Conejo Lora"
+    tagline="Un poquito más sobre mí... "
     actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
@@ -86,24 +87,29 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      src: photoProfile,
       alt: 'Colorful Image',
       loading: 'eager',
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Skills</h2>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sobre mí</h2>
       <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+        Llegué a este "¡Hola mundo!" por pura curiosidad, en un afán de ampliar mis conocimientos sobre el tratamiento
+        de datos en el trabajo... y me quedé, quizá un poco por masoquismo, con la firme idea de cambiar de sector.
+        Descubrí que, entre sufrir líneas de código y celebrar un glorioso BUILD SUCCESS, existe una satisfacción única.
       </p>
       <br />
       <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
+        Soy una desarrolladora en constante crecimiento, convencida de que el café y los console.log() salvan vidas y
+        que transformar ideas en código es casi como hacer magia. Siempre diseño soluciones elegantes, con un par de
+        backups a la mano por si la elegancia decide tomarse un descanso...
       </p>
       <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+      <p>
+        Busco oportunidades prácticas donde aprender y aportar, para que en vez de que el lema sea "esto no debería
+        pasar", encontremos juntos soluciones creativas y eficaces.🚀
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
