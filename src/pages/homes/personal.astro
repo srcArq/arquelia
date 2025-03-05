@@ -14,7 +14,7 @@ import photoProfile from '~/assets/images/photoProfile.jpg';
 import { Image } from 'astro:assets';
 
 const metadata = {
-  title: 'Personal Homepage Demo',
+  title: 'Personal information Homepage ',
 };
 ---
 
@@ -23,12 +23,12 @@ const metadata = {
   <Fragment slot="header">
     <Header
       links={[
-        { text: 'Home', href: '#' },
+        { text: 'Sobre mí', href: '#' },
         { text: 'About', href: '#about' },
         { text: 'Experiencia', href: '#experiencia' },
         { text: 'Educación', href: '#educacion' },
         { text: 'Soft Skills', href: '#soft-skills' },
-        { text: 'Github', href: '/contact' },
+        { text: 'Contactar', href: '/contact' },
       ]}
       actions={[
         {
@@ -45,14 +45,19 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Arquelia Conejo Lora"
-    tagline="Un poquito más sobre mí... "
+    title="¿Qué hago aquí...?"
     actions={[{ variant: 'primary', text: 'Contáctame', href: getPermalink('/contact') }]}
   >
     <Fragment slot="subtitle">
-      Llegué a este "¡Hola mundo!" por pura curiosidad, en un afán de ampliar mis conocimientos sobre el tratamiento de
-      datos en mí trabajo... y me quedé por masoquismo, con la firme idea de cambiar de sector. Descubrí que, entre
-      sufrir líneas de código y celebrar un glorioso BUILD SUCCESS, existe una satisfacción única.
+      <span class="hidden xl:inline"></span><br />
+      Llegué a este <span class="italic">"¡Hola mundo!"</span> por pura curiosidad, en un afán de ampliar mis conocimientos
+      sobre el tratamiento de datos en mi trabajo...
+      <br class="mb-1" />
+      Y me quedé por masoquismo, con la firme idea de cambiar de sector.
+      <br class="mb-1" />
+      Descubrí que, entre sufrir líneas de código y celebrar un glorioso <span class="italic">BUILD SUCCESS</span>,
+      <br class="mb-1" />
+      <span class="font-bold">existe una satisfacción única.</span>
     </Fragment>
   </Hero>
 
@@ -96,20 +101,20 @@ const metadata = {
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sobre mí</h2>
       <p>
-        Llegué a este "¡Hola mundo!" por pura curiosidad, en un afán de ampliar mis conocimientos sobre el tratamiento
+        Llegué a este <span class="italic">"¡Hola mundo!"</span> por pura curiosidad, en un afán de ampliar mis conocimientos sobre el tratamiento
         de datos en mí trabajo... y me quedé por masoquismo, con la firme idea de cambiar de sector. Descubrí que, entre
-        sufrir líneas de código y celebrar un glorioso BUILD SUCCESS, existe una satisfacción única.
+        sufrir líneas de código y celebrar un glorioso <span class="font-bold">BUILD SUCCESS</span>, existe una satisfacción única.
       </p>
       <br />
       <p>
-        Estoy en constante crecimiento, convencida de que el café y los console.log() salvan vidas y que transformar
+        Estoy en constante crecimiento, convencida de que el café y los <span class="italic">console.log()</span> salvan vidas y que transformar
         ideas en código es como hacer magia. Diseño soluciones elegantes, con un par de backups a mano por si la
         elegancia decide tomarse un descanso...
       </p>
       <br />
       <p>
-        Busco oportunidades prácticas donde aprender y aportar, para que en vez de que el lema sea "esto no debería
-        pasar", encontremos juntos soluciones creativas y eficaces.🚀
+        Busco oportunidades prácticas donde aprender y aportar, para que en vez de que el lema sea <span class="italic"> "esto no debería
+          pasar"</span>,<br class="mb-1" /><span class="font-bold">podamos encontrar juntos soluciones creativas y eficaces.</span> 🚀
       </p>
     </Fragment>
 

@@ -3,31 +3,28 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Sobre mí',
       href: getPermalink('/homes/personal'),
     },
     {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-      
-      ],
+      text: 'Experiencia',
+      href: getPermalink('/homes/personal#experiencia'),
     },
     {
-      text: 'Landing',
-      href: getPermalink('/landing/subscription'),
+      text: 'Educación',
+      href: getPermalink('/homes/personal#educacion'),
     },
-
     {
-      text: 'Widgets',
-      href: '#',
+      text: 'Skills',
+      href: getPermalink('#skills'),
+    },
+    {
+      text: 'Soft Skills',
+      href: getPermalink('/homes/personal#soft-skills'),
+    },
+    {
+      text: 'Contact',
+      href: getPermalink('/contact'),
     },
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
