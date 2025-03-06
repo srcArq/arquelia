@@ -10,6 +10,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import TypedText from '~/components/ui/TypedText.astro';
 
 const metadata = {
   title: '👋 Soy Arquelia',
@@ -25,7 +26,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'CV',
-        href: '/public/CV_Arquelia Conejo.pdf',
+        href: '/CV_Arquelia Conejo.pdf',
         target: '_blank',
         icon: 'tabler:download',
       },
@@ -43,10 +44,13 @@ const metadata = {
       <span class="hidden xl:inline"></span><br />
       <span class="text-lg font-medium tracking-wide">Desarrolladora de software junior.</span><br/>
       <!-- Sub titulo efecto mecanografiado -->
-      <span class="text-lg font-medium tracking-wide">
+       <TypedText client:load/>
+
+   <!--    <span class="text-lg font-medium tracking-wide">
         Enjoying <span id="typed-effect" class="text-accent tracking-wide typed-cursor blinking"></span>
-      </span>
+      </span> -->
     </Fragment>
+    
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
@@ -412,7 +416,7 @@ const metadata = {
 </CallToAction>
 
 <!-- Script para el efecto mecanografiado usando Typed.js -->
-<script>
+<!-- <script>
   import Typed from 'typed.js';
 
   const options = {
@@ -425,3 +429,4 @@ const metadata = {
 
   new Typed('#typed-effect', options);
 </script>
+ -->
