@@ -3,6 +3,10 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Button from '~/components/ui/Button.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Hero3 from '~/components/widgets/Hero3.astro';
 
 const metadata = {
   title: 'Contact',
@@ -12,12 +16,29 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
+  <Hero3
+  tagline="Contacto"
+  title={`¿Te ha interesado mi perfil?<br/><span class="text-3xl md:text-4xl font-semibold">¡Hablemos!</span>`}
+  subtitle="Estoy disponible para nuevos proyectos y colaboraciones. ¡No dudes en contactarme!"
+  actions={[
+    {
+      text: 'Ver GitHub',
+      href: 'https://github.com/srcArq',
+      variant: 'secondary',
+      icon: 'tabler:brand-github'
+    },
+    {
+      text: 'Contactar en LinkedIn',
+      href: 'https://www.linkedin.com/in/arqcl/',
+      variant: 'secondary',
+      icon: 'tabler:brand-linkedin'
+    }
+  ]}
+  classes={{ container: '!pb-8' }}  // Reduce el espacio inferior
+/>
   <ContactUs
     id="form"
-    title="¿Te ha interesado mi perfil? ¡Hablemos! "
-    subtitle="Estoy disponible para nuevos proyectos y colaboraciones. ¡No dudes en contactarme!."
+    title="¿Mejor por correo?"
     inputs={[
       {
         type: 'text',
@@ -40,40 +61,4 @@ const metadata = {
     description="Our support team typically responds within 24 business hours."
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="We are here to help!"
-    items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'src.arqcl@gmail.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
 </Layout>
