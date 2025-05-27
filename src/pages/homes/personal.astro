@@ -23,10 +23,10 @@ const metadata = {
   <Fragment slot="header">
     <Header
       links={[
-        { text: 'Sobre mí', href: '#' },
-        { text: 'About', href: '#about' },
+        { text: 'Sobre mí', href: '#about' },
         { text: 'Experiencia', href: '#experiencia' },
         { text: 'Educación', href: '#educacion' },
+        { text: 'Skills', href: '#hard-skills' },
         { text: 'Soft Skills', href: '#soft-skills' },
         { text: 'Contactar', href: '/contact' },
       ]}
@@ -98,8 +98,9 @@ const metadata = {
       loading: 'eager',
     }}
   >
+    <!-- **** ABOUT ME **** -->
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sobre mí</h2>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">¿Qué hago aquí...?</h2>
       <p>
         Llegué a este <span class="italic">"¡Hola mundo!"</span> por pura curiosidad, en un afán de ampliar mis conocimientos
         sobre el tratamiento de datos en mí trabajo... y me quedé por masoquismo, con la firme idea de cambiar de sector.
@@ -125,8 +126,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
-
+  <!-- **** EXPIRIENCE **** -->
   <Steps
     id="experiencia"
     title="Experiencia Laboral"
@@ -161,8 +161,7 @@ Coordinación operativa, administrativa y fomentando la mejora continua en proce
     classes={{ container: 'max-w-3xl' }}
   />
 
-  <!-- Steps Widget ****************** -->
-
+  <!-- **** EDUCATION **** -->
   <Steps
     id="educacion"
     title="Educación"
@@ -187,7 +186,57 @@ Coordinación operativa, administrativa y fomentando la mejora continua en proce
     classes={{ container: 'max-w-3xl' }}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- **** HARD SKILLS **** -->
+  <Features3
+   id="hard-skills"
+   tagline="Features"
+   title="Habilidades Técnicas"
+   items={[
+     {
+       title: 'Lenguajes de Programación',
+       description: 'Java, C#, SQL, JavaScript.',
+       icon: 'tabler:brand-tailwind',
+     },
+     {
+       title: 'Frameworks y Tecnologías',
+       description: 'Spring Boot, ASP.NET Core, Hibernate.',
+       icon: 'tabler:components',
+     },
+     {
+       title: 'Bases de Datos',
+       description: 'PostgreSQL, SQL Server, MySQL, SQLite.',
+       icon: 'tabler:list-check',
+     },
+     {
+       title: 'Herramientas de Desarrollo',
+       description: 'IntelliJ IDEA, Visual Studio, Visual Studio Code, NetBeans.',
+       icon: 'tabler:rocket',
+     },
+     {
+       title: 'Control de Versiones',
+       description: 'Git, GitHub.',
+       icon: 'tabler:bulb',
+     },
+     {
+       title: 'Pruebas y Calidad de Código',
+       description: ' JUnit, NUnit, Postman para APIs REST, pruebas de integración y unitarias.',
+       icon: 'tabler:bulb',
+     },
+     {
+       title: 'Metodologías',
+       description: 'Desarrollo ágil (Scrum, Kanban), modelo en V, modelo en cascada.',
+       icon: 'tabler:arrows-right-left',
+     },
+     {
+       title: 'Otros',
+       description:
+         'Creación de instaladores con Inno Setup, documentación con DocBook, optimización de consultas SQL, manejo de ERD y modelado de datos.',
+       icon: 'tabler:arrows-right-left',
+     },
+   ]}
+ />
+
+  <!-- **** SOFT SKILLS **** -->
 
   <Features3
     id="soft-skills"

@@ -3,10 +3,6 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Sobre mí',
-      href: getPermalink('#'),
-    },
-    {
       text: 'Experiencia',
       href: getPermalink('/homes/personal#experiencia'),
     },
@@ -16,7 +12,7 @@ export const headerData = {
     },
     {
       text: 'Skills',
-      href: getPermalink('#skills'),
+      href: getPermalink('/homes/personal#hard-skills'),
     },
     {
       text: 'Soft Skills',
@@ -86,7 +82,7 @@ export const footerData = {
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/srcArq' },
   ],
   footNote: `
     <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
