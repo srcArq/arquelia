@@ -3,6 +3,10 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
+      text: 'Sobre mí',
+      href: getPermalink('/homes/personal#about'),
+    },
+    {
       text: 'Experiencia',
       href: getPermalink('/homes/personal#experiencia'),
     },
@@ -23,7 +27,6 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
 
 export const footerData = {
