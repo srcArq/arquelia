@@ -6,15 +6,19 @@
   .bg-page {
     background-color: var(--aw-color-bg-page);
   }
+
   .bg-dark {
     background-color: var(--aw-color-bg-page-dark);
   }
+
   .bg-light {
-    background-color: var(--aw-color-bg-page);
+    background-color: var(--aw-color-bg-transparent);
   }
+
   .text-page {
     color: var(--aw-color-text-page);
   }
+
   .text-muted {
     color: var(--aw-color-text-muted);
   }
@@ -38,15 +42,17 @@
   }
 }
 
-#header.scroll > div:first-child {
+#header.scroll>div:first-child {
   @apply bg-page md:bg-white/90 md:backdrop-blur-md;
   box-shadow: 0 0.375rem 1.5rem 0 rgb(140 152 164 / 13%);
 }
-.dark #header.scroll > div:first-child,
-#header.scroll.dark > div:first-child {
+
+.dark #header.scroll>div:first-child,
+#header.scroll.dark>div:first-child {
   @apply bg-page md:bg-[#030621e6] border-b border-gray-500/20;
   box-shadow: none;
 }
+
 /* #header.scroll > div:last-child {
   @apply py-3;
 } */
@@ -66,22 +72,23 @@
   display: block;
 }
 
-[astro-icon].icon-light > * {
+[astro-icon].icon-light>* {
   stroke-width: 1.2;
 }
 
-[astro-icon].icon-bold > * {
+[astro-icon].icon-bold>* {
   stroke-width: 2.4;
 }
 
 [data-aw-toggle-menu] path {
   @apply transition;
 }
-[data-aw-toggle-menu].expanded g > path:first-child {
+
+[data-aw-toggle-menu].expanded g>path:first-child {
   @apply -rotate-45 translate-y-[15px] translate-x-[-3px];
 }
 
-[data-aw-toggle-menu].expanded g > path:last-child {
+[data-aw-toggle-menu].expanded g>path:last-child {
   @apply rotate-45 translate-y-[-8px] translate-x-[14px];
 }
 
@@ -89,4 +96,182 @@
 
 .dd *:first-child {
   margin-top: 0;
+}
+
+/* 
+.background-image {
+  
+  background-position: center;
+  background: url("../images/background.gif") no-repeat;
+  
+} */
+
+
+.light{
+.galaxy-nebula {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    #e0f7fa33 0%,     /* Celeste muy claro */
+    #b3e0f257 20%,    /* Azul claro */
+    #81bfe279 50%,    /* Azul suave */
+    #b3e0f257 80%,    /* Azul claro */
+    #e0f7fa63 100%    /* Celeste muy claro */
+  );
+}
+}
+
+/* Partículas brillantes (reemplazan a las estrellas) */
+.galaxy-nebula::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1.5px 1.5px at 10% 20%, rgba(84, 74, 214, 0.267) 1px, transparent 2px),
+    radial-gradient(1.2px 1.2px at 20% 50%, rgba(76, 78, 150, 0.445) 1px, transparent 2px),
+    radial-gradient(1.8px 1.8px at 30% 80%, rgba(68, 91, 196, 0.5) 1.5px, transparent 2.5px),
+    radial-gradient(1.0px 1.0px at 40% 30%, rgba(42, 39, 121, 0.288) 0.8px, transparent 1.8px),
+    radial-gradient(1.5px 1.5px at 50% 60%, rgba(69, 89, 128, 0.411) 1.2px, transparent 2.2px),
+    radial-gradient(1.3px 1.3px at 60% 10%, rgba(113, 65, 168, 0.342) 1px, transparent 2px),
+    radial-gradient(1.7px 1.7px at 70% 70%, rgba(230, 236, 255, 0.8) 1.5px, transparent 2.5px),
+    radial-gradient(1.1px 1.1px at 80% 40%, rgba(255, 255, 200, 0.7) 0.9px, transparent 1.9px),
+    radial-gradient(1.9px 1.9px at 90% 85%, rgba(255, 255, 240, 0.9) 1.6px, transparent 2.6px),
+    radial-gradient(1.4px 1.4px at 15% 65%, rgba(255, 255, 220, 0.8) 1.1px, transparent 2.1px);
+  background-size: 200px 200px;
+  animation: particle-move 120s infinite linear;
+  opacity: 0.7;
+}
+
+@keyframes particle-move {
+  from { background-position: 0 0; }
+  to { background-position: -2000px 2000px; }
+}
+
+/* Partículas individuales brillantes */
+.sun-particle {
+  position: absolute;
+  background: rgba(255, 255, 200, 0.9);
+  border-radius: 50%;
+  animation: sparkle var(--duration) infinite ease-in-out;
+  box-shadow: 0 0 8px rgba(255, 255, 200, 0.5);
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0.4; 
+    transform: scale(0.6); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2); 
+    box-shadow: 0 0 15px rgba(255, 255, 150, 0.8);
+  }
+}
+
+/* Efecto de sol central */
+.sun-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 240, 0.9) 0%,
+    rgba(255, 255, 200, 0.7) 40%,
+    rgba(255, 255, 180, 0) 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(10px);
+  animation: sun-pulse 15s infinite alternate ease-in-out;
+  z-index: 1;
+}
+
+@keyframes sun-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+}
+
+
+
+
+ .dark {
+.galaxy-nebula {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Altura ajustable */
+  background: linear-gradient(
+    90deg, 
+    #000000 0%, 
+    #0a0e24 20%, 
+    #1a1b4b 50%, 
+    #0a0e24 80%, 
+    #000000 100%
+  );
+}
+/* Generador de estrellas dinámicas */
+.galaxy-nebula::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+  radial-gradient(1.5px 1.5px at 10% 20%, rgba(251, 251, 255, 0.726) 0.5px, transparent 2px),
+  radial-gradient(1.2px 1.2px at 20% 50%, rgba(233, 234, 250, 0.445) 1px, transparent 2px),
+  radial-gradient(1.8px 1.8px at 30% 80%, rgb(255, 255, 255) 0.5px, transparent 2.5px),
+  radial-gradient(1.0px 1.0px at 40% 30%, rgba(241, 241, 245, 0.562) 0.8px, transparent 1.8px),
+  radial-gradient(1.3px 1.3px at 60% 10%, rgba(255, 255, 255, 0.822) 1px, transparent 2px),
+  radial-gradient(1.1px 1.1px at 80% 40%, rgba(255, 255, 200, 0.7) 0.9px, transparent 1.9px),
+  radial-gradient(1.9px 1.9px at 90% 85%, rgba(255, 255, 240, 0.9)0.6px, transparent 2.6px),
+  radial-gradient(1.4px 1.4px at 15% 65%, rgba(255, 255, 220, 0.8) 1.1px, transparent 2.1px);
+  background-size: 200px 200px;
+  animation: star-move 100s infinite linear;
+}
+ }
+
+
+
+
+@keyframes nebula-drift {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(0%) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--duration) infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+
+
+@keyframes star-move {
+  from { background-position: 0 0; }
+  to { background-position: -2000px 2000px; }
 }

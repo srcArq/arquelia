@@ -12,8 +12,10 @@ import { UI } from 'astrowind:config';
   function applyTheme(theme) {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
     } else {
       document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
     }
   }
 
@@ -69,6 +71,7 @@ import { UI } from 'astrowind:config';
         return;
       }
       document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.toggle('light');
       localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
     });
 
