@@ -19,7 +19,6 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  
   <Fragment slot="header">
     <Header
       links={[
@@ -28,15 +27,12 @@ const metadata = {
         { text: 'Educación', href: '#educacion' },
         { text: 'Skills', href: '#hard-skills' },
         { text: 'Soft Skills', href: '#soft-skills' },
-        { text: 'Contactar', href: '/contact' },
+        { text: 'Contacta', href: '/contact' },
       ]}
-    
       isSticky
       showToggleTheme
     />
   </Fragment>
-
-   
 
   <!-- Content Widget **************** -->
 
@@ -60,8 +56,8 @@ const metadata = {
       <br />
       <p>
         Estoy en constante crecimiento, convencida de que el café y los <span class="italic">console.log()</span> salvan
-        vidas y que transformar ideas en código es como hacer magia. Diseño soluciones elegantes, con un par de backups a
-        mano por si la elegancia decide tomarse un descanso...
+        vidas y que transformar ideas en código es como hacer magia. Intento diseñar soluciones elegantes, con un par de
+        backups a mano por si la elegancia decide tomarse un descanso...
       </p>
       <br />
       <p>
@@ -83,7 +79,7 @@ const metadata = {
     items={[
       {
         title:
-          'Coordinadora de equipo (CRA High Risk) <br /> <span class="font-normal">Securitas Direct, Barcelona (España)</span> <br /> <span class="text-sm font-normal">Agosto 2022 - Actual</span>',
+          'Coordinadora de equipo <br /> <span class="font-normal">Securitas Direct, Barcelona (España)</span> <br /> <span class="text-sm font-normal">Agosto 2022 - Actual</span>',
         description: `Funciones de Team Lead a un nivel superior durante el turno nocturno. <br />
         Gestionando incidencias de alto riesgo y supervisando un gran volumen de trabajo. <br />
 Coordinación operativa, administrativa y fomentando la mejora continua en procesos y formación, garantizando un servicio de calidad ante situaciones críticas.`,
@@ -93,7 +89,7 @@ Coordinación operativa, administrativa y fomentando la mejora continua en proce
         title:
           'Coordinadora de equipo (CRA) <br /> <span class="font-normal">Securitas Direct, Barcelona (España)</span> <br /> <span class="text-sm font-normal">Enero 2022 - Agosto 2022</span>',
         description: `Funciones de Team Lead. <br />
-      Apoyo emocional ante situaciones de alto riesgo. <br />
+      Apoyo emocional ante situaciones de estrés. <br />
       Fomento de sus capacidades y la promoción interna dentro del departamento. <br />
       Comunicación y coordinación con las herramientas transversales y departamentos de la compañía. <br />
       Análisis continuo del servicio.`,
@@ -101,7 +97,7 @@ Coordinación operativa, administrativa y fomentando la mejora continua en proce
       },
       {
         title:
-          'Especialista de seguridad/Atención al cliente (CRA) <br /> <span class="font-normal">Securitas Direct, Barcelona (España)</span> <br /> <span class="text-sm font-normal">Julio 2019 - Diciembre 2021</span>',
+          'Especialista de seguridad/Atención al cliente <br /> <span class="font-normal">Securitas Direct, Barcelona (España)</span> <br /> <span class="text-sm font-normal">Julio 2019 - Diciembre 2021</span>',
         description: `Recepción y gestión de señales de emergencia. <br />
       Ejecución, funciones y diligencia en situaciones de emergencia, prevención de riesgos y actuación directa. <br />
       Comunicación con los departamentos correspondientes para la validación y el mantenimiento de la seguridad.`,
@@ -145,28 +141,28 @@ Coordinación operativa, administrativa y fomentando la mejora continua en proce
     items={[
       {
         title: 'Lenguajes de Programación',
-        description: 'Java, C#, SQL, JavaScript.',
-        icon: 'tabler:brand-tailwind',
+        description: 'Java, Python, C#, SQL y JavaScript.',
+        icon: 'tabler:code-dots',
       },
       {
         title: 'Frameworks y Tecnologías',
-        description: 'Spring Boot, ASP.NET Core, Hibernate.',
+        description: 'Spring Boot, ASP.NET Core y Hibernate.',
         icon: 'tabler:components',
       },
       {
         title: 'Bases de Datos',
-        description: 'PostgreSQL, SQL Server, MySQL, SQLite.',
-        icon: 'tabler:list-check',
+        description: 'PostgreSQL, SQL Server, MySQL y SQLite.',
+        icon: 'tabler:database-cog',
       },
       {
         title: 'Herramientas de Desarrollo',
-        description: 'IntelliJ IDEA, Visual Studio, Visual Studio Code, NetBeans.',
+        description: 'IntelliJ IDEA, Visual Studio, Visual Studio Code y NetBeans. Pero en cualquier lienzo aprendo.',
         icon: 'tabler:rocket',
       },
       {
         title: 'Control de Versiones',
-        description: 'Git, GitHub.',
-        icon: 'tabler:bulb',
+        description: 'Git y GitHub.',
+        icon: 'tabler:git-merge',
       },
       {
         title: 'Pruebas y Calidad de Código',
@@ -175,8 +171,13 @@ Coordinación operativa, administrativa y fomentando la mejora continua en proce
       },
       {
         title: 'Metodologías',
-        description: 'Desarrollo ágil (Scrum, Kanban), modelo en V, modelo en cascada.',
-        icon: 'tabler:arrows-right-left',
+        description: 'Desarrollo ágil (Scrum y Kanban), modelo en V y modelo en cascada.',
+        icon: 'tabler:topology-star-3',
+      },
+      {
+        title: 'Diseño y UX/UI',
+        description: 'Principios de usabilidad y prototipado con Figma.',
+        icon: 'tabler:components',
       },
       {
         title: 'Otros',
@@ -200,67 +201,76 @@ Coordinación operativa, administrativa y fomentando la mejora continua en proce
         title: 'Gestión de Equipos y Liderazgo',
         description:
           'He liderado equipos con foco en KPI’s, promoviendo el bienestar emocional y el desarrollo profesional individual.',
+        icon: 'tabler:brand-auth0',
       },
       {
         title: 'Planificación y Análisis',
         description:
           'Experiencia en generar planes de acción, realizar control de datos y analizar la mejora continua de proyectos para optimizar resultados.',
+        icon: 'tabler:chart-bar',
       },
       {
         title: 'Colaboración Interdepartamental',
         description:
           'Trabajo mano a mano con distintos departamentos, mejorando herramientas transversales y alcanzando objetivos comunes de forma colaborativa.',
+        icon: 'tabler:settings-plus',
       },
       {
         title: 'Gestión y Trato con el Cliente',
         description:
           'Alta capacidad para gestionar proyectos y mantener un excelente trato con el cliente, respaldado por sólidas dotes de comunicación.',
+        icon: 'tabler:message-user',
       },
       {
         title: 'Competencias Ofimáticas y Tecnológicas',
         description:
           'Domino la suite ofimática y tengo pasión por la tecnología, complementado con cursos en data mining, business y business intelligence.',
+        icon: 'tabler:device-analytics',
       },
       {
         title: 'Proactividad y Organización',
         description:
           'Soy proactiva y organizada, siempre dispuesta a participar y ayudar, optimizando tiempo y recursos para lograr mayor efectividad.',
+        icon: 'tabler:users',
       },
       {
         title: 'Creatividad y Perfeccionismo',
         description:
           'Me destaco por diseñar soluciones creativas y perfeccionar procesos, sin perder el toque de humor sarcástico que hace la vida más llevadera.',
+        icon: 'tabler:bulb',
       },
       {
         title: 'Comunicación Efectiva',
         description:
-          'Capaz de transmitir ideas de forma clara y concisa, creando un ambiente colaborativo que impulsa el trabajo en equipo.',
+          'Pensamiento Crítico e Inteligencia Emocional. Capaz de transmitir ideas de forma clara y concisa, creando un ambiente colaborativo que impulsa el trabajo en equipo.',
+        icon: 'tabler:messages',
       },
       {
         title: 'Resiliencia y Adaptabilidad',
         description:
           'Afronto desafíos con resiliencia y me adapto rápidamente a nuevas situaciones, aprendiendo continuamente de cada experiencia.',
+        icon: 'tabler:replace',
+      },
+      {
+        title: 'Resolución de Problemas',
+        description: 'Diagnóstico y solución de bug críticos en producción usando metodología RCA',
+        icon: 'tabler:puzzle',
       },
     ]}
   />
 
-  
-
   <!-- CallToAction Widget *********** -->
-
   <CallToAction
-    title="Let's create together"
-    subtitle="Ready to transform your vision into captivating designs?"
+    title="¿Algún proyecto para mí perfil?"
+    subtitle="Vamos a por el siguiente paso"
     actions={[
       {
         variant: 'primary',
-        text: 'Contact me',
-        href: '/',
+        text: 'Contáctame',
+        href: '/contact',
       },
     ]}
   />
 
   <!-- BlogLatestPost Widget **************** -->
-
-  
 </Layout>

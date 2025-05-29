@@ -23,7 +23,7 @@ export const headerData = {
       href: getPermalink('/homes/personal#soft-skills'),
     },
     {
-      text: 'Contact',
+      text: 'Contacta',
       href: getPermalink('/contact'),
     },
   ],
