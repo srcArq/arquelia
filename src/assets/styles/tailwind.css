@@ -111,7 +111,7 @@
 .galaxy-nebula {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   background: linear-gradient(
     90deg, 
     #e0f7fa33 0%,     /* Celeste muy claro */
@@ -202,14 +202,11 @@
   }
 }
 
-
-
-
  .dark {
 .galaxy-nebula {
   position: relative;
   width: 100%;
-  height: 100%; /* Altura ajustable */
+  height: auto; /* Altura ajustable */
   background: linear-gradient(
     90deg, 
     #000000 0%, 

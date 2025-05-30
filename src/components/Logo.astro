@@ -7,6 +7,6 @@ import { Image } from 'astro:assets';
 <span
   class="flex items-center rtl:space-x-reverse text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
 >
-  <Image src={logo} alt={`Logo de ${SITE?.name}`} class="w-8 h-8 rounded-full object-cover" />
+  <Image src={logo} alt={`Logo de ${SITE?.name}`} class="w-10 h-10 rounded-full object-cover transition duration-30 hover:scale-150" />
   <span class="ml-2 md:text-xs">{SITE?.name}</span>
 </span>
